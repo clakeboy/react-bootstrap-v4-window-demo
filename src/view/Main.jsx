@@ -26,6 +26,7 @@ import {
     WindowGroup,
     TopMenu
 } from '@clake/react-bootstrap4-window';
+import windowList from './window/windows';
 
 class Main extends React.Component {
     constructor(props) {
@@ -126,33 +127,24 @@ class Main extends React.Component {
             <Container className='mt-5'>
                 <TopMenu top>
                     <div className='ck-top-menu-item'><Icon icon='copyright'/></div>
-                    <TopMenu.Item text='Main'>
+                    <TopMenu.Item text='ABI'>
                         <Menu onClick={(key)=>{
                             this.manage.open(key);
                         }}>
-                            <Menu.Item field="a_efc_console">Convert Console</Menu.Item>
-                            <Menu.Item step/>
-                            <Menu.Item field="f_aes_master">WWF / AESWeblink</Menu.Item>
-                            <Menu.Item field="f_aes_query">Query Customer</Menu.Item>
-                            <Menu.Item field="test">Test</Menu.Item>
+                            {windowList.map((item)=>{
+                                return <Menu.Item field={item.name}>{item.title}</Menu.Item>
+                            })}
                         </Menu>
                     </TopMenu.Item>
                     <TopMenu.Item text='Other'/>
                 </TopMenu>
                 <h1 className='fixed-bottom'>React Bootstrap v4 Window Demo</h1>
                 <WindowGroup ref={c=>this.manage=c}>
-                    <Window name='f_aes_query' marginTop={25} title='Query Customer' width='867px' height='444px' x={'40px'} y={'55px'} backColor={'#f3f3f4'}>
-                        <LoaderComponent loadPath='/window/FAesQuery.jsx' parent={this} import={GetComponent}/>
-                    </Window>
-                    <Window name='f_aes_master' marginTop={25} title='WWF / AESWeblink - Add New' width='833px' height='476px' x={'935px'} y={'55px'} backColor={'#f3f3f4'}>
-                        <LoaderComponent loadPath='/window/FAesMaster.jsx' parent={this} import={GetComponent}/>
-                    </Window>
-                    <Window name='a_efc_console' marginTop={25} title='ETC Project  Convert Console' width='600px' height='536px' backColor={'#f3f3f4'}>
-                        <LoaderComponent loadPath='/window/AEfcConsole.jsx' parent={this} import={GetComponent}/>
-                    </Window>
-                    <Window name='test' marginTop={25} title='ETC Project  Convert Console' width='600px' height='536px' backColor={'#f3f3f4'}>
-
-                    </Window>
+                    {windowList.map((item)=>{
+                        return (<Window name={item.name} marginTop={25} title={item.title} width={item.width} height={item.height} backColor={'#f3f3f4'}>
+                            <LoaderComponent loadPath={`/window/${item.uname}.jsx`} import={GetComponent}/>
+                        </Window>)
+                    })}
                 </WindowGroup>
             </Container>
         );
