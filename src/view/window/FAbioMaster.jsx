@@ -41,37 +41,37 @@ class FAbioMaster extends React.Component {
             <React.Fragment>
                 <Tabs sm={true} border={true} absolute={true} x={'0px'} y={'0px'} width={'844px'} height={'504px'}>
                     <TabsContent id='Manifest' text='Manifest' active>
-                        <Input size={'xs'} absolute={true} x={'136px'} y={'43px'} width={'112px'}/>
+                        <Input field={'master_bl_no'} size={'xs'} absolute={true} x={'136px'} y={'43px'} width={'112px'}/>
                         <Label sm={true} text={'Master B/L No.'} absolute={true} x={'32px'} y={'43px'} width={'96px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
                         <Box absolute={true} x={'16px'} y={'81px'} width={'404px'} height={'110px'} borderWidth={'1px'} borderColor={'rgb(0,0,0)'} backColor={'192,192,192'}/>
                         <Checkbox absolute={true} x={'368px'} y={'158px'}/>
                         <Label sm={true} text={'ISF on File'} absolute={true} x={'264px'} y={'153px'} width={'96px'} height={'19px'} color={'rgb(18,0,0)'} backColor={'rgb()'}/>
                         <Box absolute={true} x={'420px'} y={'81px'} width={'404px'} height={'110px'} borderWidth={'1px'} borderColor={'rgb(0,0,0)'} backColor={'192,192,192'}/>
                         <Button size={'xs'} absolute={true} x={'740px'} y={'43px'} width={'80px'} height={'24px'}>Requery</Button>
-                        <Input size={'xs'} absolute={true} x={'136px'} y={'124px'} width={'112px'}/>
+                        <Input field={'file_doc_number'} size={'xs'} absolute={true} x={'136px'} y={'124px'} width={'112px'}/>
                         <Label sm={true} text={'File Number'} absolute={true} x={'32px'} y={'124px'} width={'96px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                        <Input size={'xs'} absolute={true} x={'324px'} y={'43px'} width={'96px'}/>
+                        <Input field={'status_desc'} size={'xs'} absolute={true} x={'324px'} y={'43px'} width={'96px'}/>
                         <Label sm={true} text={'Status'} absolute={true} x={'264px'} y={'43px'} width={'52px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                        <Input size={'xs'} absolute={true} x={'136px'} y={'96px'} width={'112px'}/>
+                        <Input field={'group_code'} size={'xs'} absolute={true} x={'136px'} y={'96px'} width={'112px'}/>
                         <Label sm={true} text={'Group Code'} absolute={true} x={'32px'} y={'96px'} width={'96px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                        <Input size={'xs'} absolute={true} x={'136px'} y={'153px'} width={'64px'}/>
+                        <Input field={'manifest_quantity'} size={'xs'} absolute={true} x={'136px'} y={'153px'} width={'64px'}/>
                         <Label sm={true} text={'Total Package'} absolute={true} x={'32px'} y={'153px'} width={'96px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                        <Input size={'xs'} absolute={true} x={'208px'} y={'153px'} width={'40px'}/>
-                        <Input size={'xs'} absolute={true} x={'368px'} y={'96px'} width={'28px'}/>
+                        <Input field={'quantity_unit'} size={'xs'} absolute={true} x={'208px'} y={'153px'} width={'40px'}/>
+                        <Input field={'hbl_count'} size={'xs'} absolute={true} x={'368px'} y={'96px'} width={'28px'}/>
                         <Label sm={true} text={'No. of Houses'} absolute={true} x={'264px'} y={'96px'} width={'96px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                        <Input size={'xs'} absolute={true} x={'368px'} y={'124px'} width={'28px'}/>
+                        <Input field={'request_count'} size={'xs'} absolute={true} x={'368px'} y={'124px'} width={'28px'}/>
                         <Label sm={true} text={'Request Times'} absolute={true} x={'264px'} y={'124px'} width={'96px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                        <Input size={'xs'} absolute={true} x={'512px'} y={'96px'} width={'140px'}/>
+                        <Input field={'conveyance_name'} size={'xs'} absolute={true} x={'512px'} y={'96px'} width={'140px'}/>
                         <Label sm={true} text={'Vessel'} absolute={true} x={'436px'} y={'96px'} width={'68px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                        <Input size={'xs'} absolute={true} x={'512px'} y={'124px'} width={'140px'}/>
+                        <Input field={'departure_port_name'} size={'xs'} absolute={true} x={'512px'} y={'124px'} width={'140px'}/>
                         <Label sm={true} text={'Loading'} absolute={true} x={'436px'} y={'124px'} width={'68px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                        <Input size={'xs'} absolute={true} x={'512px'} y={'153px'} width={'140px'}/>
+                        <Input field={'arrival_port_name'} size={'xs'} absolute={true} x={'512px'} y={'153px'} width={'140px'}/>
                         <Label sm={true} text={'Discharge'} absolute={true} x={'436px'} y={'153px'} width={'68px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                        <Input size={'xs'} absolute={true} x={'660px'} y={'96px'} width={'52px'}/>
-                        <Input size={'xs'} absolute={true} x={'760px'} y={'96px'} width={'40px'}/>
+                        <Input field={'manifest_number'} size={'xs'} absolute={true} x={'660px'} y={'96px'} width={'52px'}/>
+                        <Input field={'FIRMS_code'} size={'xs'} absolute={true} x={'760px'} y={'96px'} width={'40px'}/>
                         <Label sm={true} text={'Firm'} absolute={true} x={'720px'} y={'96px'} width={'32px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                        <Input size={'xs'} absolute={true} x={'660px'} y={'124px'} width={'140px'}/>
-                        <Input size={'xs'} absolute={true} x={'660px'} y={'153px'} width={'140px'}/>
+                        <Input field={'departure_date'} size={'xs'} absolute={true} x={'660px'} y={'124px'} width={'140px'}/>
+                        <Input field={'arrival_date'} size={'xs'} absolute={true} x={'660px'} y={'153px'} width={'140px'}/>
                         <CTable absolute x={'16px'} y={'192px'} width={'807px'} height={'291px'} scroll={true} headerTheme={'light'} hover={true} select={true} sm={true} fontSm={true}>
                             <Table.Header text={'SCAC'} field={'issuer_code'} width={'52px'}/>
                             <Table.Header text={'B/L Number'} field={'bl_no'} width={'152px'}/>
@@ -94,9 +94,9 @@ class FAbioMaster extends React.Component {
                             <Table.Header text={'Package'} field={'inbond_quantity'} width={'52px'}/>
                             <Table.Header text={'I.T. Complete'} field={'it_complete_date'} width={'108px'}/>
                         </CTable>
-                        <Input size={'xs'} absolute={true} x={'388px'} y={'43px'} width={'140px'}/>
+                        <Input field={'ptt_auth_date'} size={'xs'} absolute={true} x={'388px'} y={'43px'} width={'140px'}/>
                         <Label sm={true} text={'PTT Authorized'} absolute={true} x={'280px'} y={'43px'} width={'100px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                        <Input size={'xs'} absolute={true} x={'124px'} y={'43px'} width={'116px'}/>
+                        <Input field={'master_bl_no'} size={'xs'} absolute={true} x={'124px'} y={'43px'} width={'116px'}/>
                         <Label sm={true} text={'Master B/L No.'} absolute={true} x={'20px'} y={'43px'} width={'96px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
                     </TabsContent>
                 </Tabs>

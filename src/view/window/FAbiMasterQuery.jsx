@@ -64,7 +64,7 @@ class FAbiMasterQuery extends React.Component {
                     <Table.Header text={'Group'} field={'group_code'} width={'64px'}/>
                     <Table.Header text={'Br'} field={'branch_code'} width={'36px'}/>
                 </CTable>
-                <Input size={'xs'} absolute={true} x={'100px'} y={'48px'} width={'112px'}/>
+                <Input field={'master_bl_no'} size={'xs'} absolute={true} x={'100px'} y={'48px'} width={'112px'}/>
                 <Label sm={true} text={'Master No.'} absolute={true} x={'20px'} y={'48px'} width={'72px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
                 <Input size={'xs'} absolute={true} x={'100px'} y={'76px'} width={'112px'} combo={{
                     searchColumn:'name',
@@ -74,19 +74,19 @@ class FAbiMasterQuery extends React.Component {
                     ]
                 }}/>
                 <Label sm={true} text={'Status'} absolute={true} x={'20px'} y={'76px'} width={'72px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'616px'} y={'48px'} width={'100px'}/>
+                <Input field={'arrival_date1'} size={'xs'} absolute={true} x={'616px'} y={'48px'} width={'100px'}/>
                 <Label sm={true} text={'E T A'} absolute={true} x={'540px'} y={'48px'} width={'68px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'724px'} y={'48px'} width={'100px'}/>
-                <Input size={'xs'} absolute={true} x={'316px'} y={'48px'} width={'48px'}/>
+                <Input field={'arrival_date2'} size={'xs'} absolute={true} x={'724px'} y={'48px'} width={'100px'}/>
+                <Input field={'MOT'} size={'xs'} absolute={true} x={'316px'} y={'48px'} width={'48px'}/>
                 <Label sm={true} text={'Mode'} absolute={true} x={'232px'} y={'48px'} width={'76px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'316px'} y={'76px'} width={'48px'}/>
+                <Input field={'last_disposition_code'} size={'xs'} absolute={true} x={'316px'} y={'76px'} width={'48px'}/>
                 <Label sm={true} text={'Event Code'} absolute={true} x={'232px'} y={'76px'} width={'76px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'616px'} y={'76px'} width={'100px'}/>
+                <Input field={'last_modified_date1'} size={'xs'} absolute={true} x={'616px'} y={'76px'} width={'100px'}/>
                 <Label sm={true} text={'Last Event'} absolute={true} x={'540px'} y={'76px'} width={'68px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'724px'} y={'76px'} width={'100px'}/>
-                <Input size={'xs'} absolute={true} x={'444px'} y={'48px'} width={'76px'}/>
+                <Input field={'last_modified_date2'} size={'xs'} absolute={true} x={'724px'} y={'76px'} width={'100px'}/>
+                <Input field={'group_code'} size={'xs'} absolute={true} x={'444px'} y={'48px'} width={'76px'}/>
                 <Label sm={true} text={'Group'} absolute={true} x={'384px'} y={'48px'} width={'52px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'444px'} y={'76px'} width={'76px'}/>
+                <Input field={'branch_code'} size={'xs'} absolute={true} x={'444px'} y={'76px'} width={'76px'}/>
                 <Label sm={true} text={'Branch'} absolute={true} x={'384px'} y={'76px'} width={'52px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
                 <Button size={'xs'} absolute={true} x={'20px'} y={'8px'} width={'52px'} height={'24px'}>Query</Button>
                 <Button size={'xs'} absolute={true} x={'76px'} y={'8px'} width={'52px'} height={'24px'}>Clear</Button>

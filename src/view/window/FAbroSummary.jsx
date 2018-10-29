@@ -57,15 +57,15 @@ class FAbroSummary extends React.Component {
                     <Table.Header text={'Last Event Date'} field={'it_complete_date'} width={'108px'}/>
                     <Table.Header text={'Last Status Desc'} field={'last_event_date'} width={'140px'}/>
                 </CTable>
-                <Input size={'xs'} absolute={true} x={'128px'} y={'20px'} width={'112px'}/>
+                <Input field={'master_bl_no'} size={'xs'} absolute={true} x={'128px'} y={'20px'} width={'112px'}/>
                 <Label sm={true} text={'Master B/L No.'} absolute={true} x={'20px'} y={'20px'} width={'100px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'368px'} y={'20px'} width={'124px'}/>
+                <Input field={'departure_port_name'} size={'xs'} absolute={true} x={'368px'} y={'20px'} width={'124px'}/>
                 <Label sm={true} text={'Loading'} absolute={true} x={'292px'} y={'20px'} width={'68px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'368px'} y={'48px'} width={'124px'}/>
+                <Input field={'arrival_port_name'} size={'xs'} absolute={true} x={'368px'} y={'48px'} width={'124px'}/>
                 <Label sm={true} text={'Discharge'} absolute={true} x={'292px'} y={'48px'} width={'68px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'500px'} y={'20px'} width={'124px'}/>
-                <Input size={'xs'} absolute={true} x={'500px'} y={'48px'} width={'124px'}/>
-                <Input size={'xs'} absolute={true} x={'128px'} y={'48px'} width={'112px'}/>
+                <Input field={'departure_date'} size={'xs'} absolute={true} x={'500px'} y={'20px'} width={'124px'}/>
+                <Input field={'arrival_date'} size={'xs'} absolute={true} x={'500px'} y={'48px'} width={'124px'}/>
+                <Input field={'file_doc_number'} size={'xs'} absolute={true} x={'128px'} y={'48px'} width={'112px'}/>
                 <Label sm={true} text={'File Number'} absolute={true} x={'20px'} y={'48px'} width={'100px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
             </React.Fragment>
         );

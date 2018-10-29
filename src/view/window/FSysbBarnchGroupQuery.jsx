@@ -44,9 +44,9 @@ class FSysbBarnchGroupQuery extends React.Component {
                     <Table.Header text={'Group'} field={'group_code'} width={'92px'}/>
                     <Table.Header text={'Branch'} field={'branch_code'} width={'76px'}/>
                 </CTable>
-                <Input size={'xs'} absolute={true} x={'296px'} y={'48px'} width={'48px'}/>
+                <Input field={'branch_code'} size={'xs'} absolute={true} x={'296px'} y={'48px'} width={'48px'}/>
                 <Label sm={true} text={'Branch'} absolute={true} x={'232px'} y={'48px'} width={'56px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'80px'} y={'48px'} width={'76px'}/>
+                <Input field={'group_code'} size={'xs'} absolute={true} x={'80px'} y={'48px'} width={'76px'}/>
                 <Label sm={true} text={'Group'} absolute={true} x={'20px'} y={'48px'} width={'52px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
                 <Button size={'xs'} absolute={true} x={'20px'} y={'8px'} width={'52px'} height={'24px'}>Query</Button>
                 <Button size={'xs'} absolute={true} x={'76px'} y={'8px'} width={'52px'} height={'24px'}>Clear</Button>

@@ -55,9 +55,9 @@ class FAbraSummary extends React.Component {
                     <Table.Header text={'Last Event Date'} field={'it_complete_date'} width={'108px'}/>
                     <Table.Header text={'Last Status Desc'} field={'last_event_date'} width={'140px'}/>
                 </CTable>
-                <Input size={'xs'} absolute={true} x={'100px'} y={'16px'} width={'120px'}/>
+                <Input field={'master_bl_no'} size={'xs'} absolute={true} x={'100px'} y={'16px'} width={'120px'}/>
                 <Label sm={true} text={'MAWB No.'} absolute={true} x={'20px'} y={'16px'} width={'72px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'100px'} y={'44px'} width={'120px'}/>
+                <Input field={'airline'} size={'xs'} absolute={true} x={'100px'} y={'44px'} width={'120px'}/>
                 <Label sm={true} text={'Airline'} absolute={true} x={'20px'} y={'44px'} width={'72px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
             </React.Fragment>
         );

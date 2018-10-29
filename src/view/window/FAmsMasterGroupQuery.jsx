@@ -51,19 +51,19 @@ class FAmsMasterGroupQuery extends React.Component {
                     <Table.Header text={'First  By'} field={'created_by_code'} width={'96px'}/>
                     <Table.Header text={'First Request Date'} field={'created_date'} width={'108px'}/>
                 </CTable>
-                <Input size={'xs'} absolute={true} x={'100px'} y={'48px'} width={'120px'}/>
+                <Input field={'master_bl_no'} size={'xs'} absolute={true} x={'100px'} y={'48px'} width={'120px'}/>
                 <Label sm={true} text={'Master No.'} absolute={true} x={'20px'} y={'48px'} width={'72px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'304px'} y={'76px'} width={'72px'}/>
+                <Input field={'MOT'} size={'xs'} absolute={true} x={'304px'} y={'76px'} width={'72px'}/>
                 <Label sm={true} text={'Branch'} absolute={true} x={'244px'} y={'76px'} width={'52px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'304px'} y={'48px'} width={'72px'}/>
+                <Input field={'group_code'} size={'xs'} absolute={true} x={'304px'} y={'48px'} width={'72px'}/>
                 <Label sm={true} text={'Group'} absolute={true} x={'244px'} y={'48px'} width={'52px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
                 <Button size={'xs'} absolute={true} x={'20px'} y={'8px'} width={'52px'} height={'24px'}>Query</Button>
                 <Button size={'xs'} absolute={true} x={'76px'} y={'8px'} width={'52px'} height={'24px'}>Clear</Button>
-                <Input size={'xs'} absolute={true} x={'100px'} y={'76px'} width={'120px'}/>
+                <Input field={'master_bl_no'} size={'xs'} absolute={true} x={'100px'} y={'76px'} width={'120px'}/>
                 <Label sm={true} text={'File No.'} absolute={true} x={'20px'} y={'76px'} width={'72px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'512px'} y={'48px'} width={'100px'}/>
+                <Input field={'arrival_date1'} size={'xs'} absolute={true} x={'512px'} y={'48px'} width={'100px'}/>
                 <Label sm={true} text={'Last Request By'} absolute={true} x={'400px'} y={'48px'} width={'104px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'512px'} y={'76px'} width={'100px'}/>
+                <Input field={'last_modified_date1'} size={'xs'} absolute={true} x={'512px'} y={'76px'} width={'100px'}/>
                 <Label sm={true} text={'First  By'} absolute={true} x={'400px'} y={'76px'} width={'104px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
             </React.Fragment>
         );

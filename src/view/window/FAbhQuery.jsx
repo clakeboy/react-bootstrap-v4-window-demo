@@ -64,19 +64,19 @@ class FAbhQuery extends React.Component {
                     <Table.Header text={'I.T. Dest'} field={'inbond_dest_port_name'} width={'88px'}/>
                     <Table.Header text={'Group'} field={'group_code'} width={'64px'}/>
                 </CTable>
-                <Input size={'xs'} absolute={true} x={'100px'} y={'76px'} width={'120px'}/>
+                <Input field={'master_bl_no'} size={'xs'} absolute={true} x={'100px'} y={'76px'} width={'120px'}/>
                 <Label sm={true} text={'Master No.'} absolute={true} x={'20px'} y={'76px'} width={'72px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'100px'} y={'48px'} width={'120px'}/>
+                <Input field={'house_no'} size={'xs'} absolute={true} x={'100px'} y={'48px'} width={'120px'}/>
                 <Label sm={true} text={'House No.'} absolute={true} x={'20px'} y={'48px'} width={'72px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'524px'} y={'76px'} width={'100px'}/>
+                <Input field={'last_event_date1'} size={'xs'} absolute={true} x={'524px'} y={'76px'} width={'100px'}/>
                 <Label sm={true} text={'Last Event'} absolute={true} x={'448px'} y={'76px'} width={'68px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'524px'} y={'48px'} width={'100px'}/>
+                <Input field={'arrival_date1'} size={'xs'} absolute={true} x={'524px'} y={'48px'} width={'100px'}/>
                 <Label sm={true} text={'E T A'} absolute={true} x={'448px'} y={'48px'} width={'68px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'632px'} y={'76px'} width={'100px'}/>
-                <Input size={'xs'} absolute={true} x={'632px'} y={'48px'} width={'100px'}/>
-                <Input size={'xs'} absolute={true} x={'324px'} y={'48px'} width={'100px'}/>
+                <Input field={'last_event_date2'} size={'xs'} absolute={true} x={'632px'} y={'76px'} width={'100px'}/>
+                <Input field={'arrival_date2'} size={'xs'} absolute={true} x={'632px'} y={'48px'} width={'100px'}/>
+                <Input field={'departure_port_code'} size={'xs'} absolute={true} x={'324px'} y={'48px'} width={'100px'}/>
                 <Label sm={true} text={'Departure'} absolute={true} x={'244px'} y={'48px'} width={'72px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'324px'} y={'76px'} width={'100px'}/>
+                <Input field={'arrival_port_code'} size={'xs'} absolute={true} x={'324px'} y={'76px'} width={'100px'}/>
                 <Label sm={true} text={'Discharge'} absolute={true} x={'244px'} y={'76px'} width={'72px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
                 <Button size={'xs'} absolute={true} x={'20px'} y={'8px'} width={'52px'} height={'24px'}>Query</Button>
                 <Button size={'xs'} absolute={true} x={'76px'} y={'8px'} width={'52px'} height={'24px'}>Clear</Button>

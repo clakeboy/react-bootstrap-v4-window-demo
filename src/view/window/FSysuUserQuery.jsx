@@ -45,13 +45,13 @@ class FSysuUserQuery extends React.Component {
                     <Table.Header text={'Branch'} field={'branch_code'} width={'76px'}/>
                     <Table.Header text={'User'} field={'logon_name'} width={'112px'}/>
                 </CTable>
-                <Input size={'xs'} absolute={true} x={'248px'} y={'48px'} width={'48px'}/>
+                <Input field={'branch_code'} size={'xs'} absolute={true} x={'248px'} y={'48px'} width={'48px'}/>
                 <Label sm={true} text={'Branch'} absolute={true} x={'184px'} y={'48px'} width={'56px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
-                <Input size={'xs'} absolute={true} x={'80px'} y={'48px'} width={'76px'}/>
+                <Input field={'group_code'} size={'xs'} absolute={true} x={'80px'} y={'48px'} width={'76px'}/>
                 <Label sm={true} text={'Group'} absolute={true} x={'20px'} y={'48px'} width={'52px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
                 <Button size={'xs'} absolute={true} x={'20px'} y={'8px'} width={'52px'} height={'24px'}>Query</Button>
                 <Button size={'xs'} absolute={true} x={'76px'} y={'8px'} width={'52px'} height={'24px'}>Clear</Button>
-                <Input size={'xs'} absolute={true} x={'404px'} y={'48px'} width={'76px'}/>
+                <Input field={'branch_code'} size={'xs'} absolute={true} x={'404px'} y={'48px'} width={'76px'}/>
                 <Label sm={true} text={'User Name'} absolute={true} x={'324px'} y={'48px'} width={'72px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
             </React.Fragment>
         );

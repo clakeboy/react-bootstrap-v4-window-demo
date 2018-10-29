@@ -7,32 +7,11 @@
         "width": "520px"
     },
     {
-        "height": "528px",
-        "name": "f_abh_query",
-        "title": "Query House History",
-        "uname": "FAbhQuery",
-        "width": "792px"
-    },
-    {
-        "height": "182px",
-        "name": "f_ssa_save",
-        "title": "CHANGE  DATE",
-        "uname": "FSsaSave",
-        "width": "388px"
-    },
-    {
         "height": "508px",
         "name": "f_sysb_barnch_group_query",
         "title": "Query Branch - Group",
         "uname": "FSysbBarnchGroupQuery",
         "width": "516px"
-    },
-    {
-        "height": "528px",
-        "name": "f_abra_summary",
-        "title": "Review Customs Status -  House Summary",
-        "uname": "FAbraSummary",
-        "width": "840px"
     },
     {
         "height": "512px",
@@ -43,17 +22,17 @@
     },
     {
         "height": "528px",
-        "name": "f_ams_master_group_query",
-        "title": "Query Master Only",
-        "uname": "FAmsMasterGroupQuery",
-        "width": "788px"
-    },
-    {
-        "height": "528px",
         "name": "f_abro_summary",
         "title": "Review Customs Status -  House Summary",
         "uname": "FAbroSummary",
         "width": "855px"
+    },
+    {
+        "height": "528px",
+        "name": "f_ams_master_group_query",
+        "title": "Query Master Only",
+        "uname": "FAmsMasterGroupQuery",
+        "width": "788px"
     },
     {
         "height": "528px",
@@ -64,10 +43,38 @@
     },
     {
         "height": "528px",
+        "name": "f_abra_summary",
+        "title": "Review Customs Status -  House Summary",
+        "uname": "FAbraSummary",
+        "width": "840px"
+    },
+    {
+        "height": "182px",
+        "name": "f_ssa_save",
+        "title": "CHANGE  DATE",
+        "uname": "FSsaSave",
+        "width": "388px"
+    },
+    {
+        "height": "528px",
+        "name": "f_abh_query",
+        "title": "Query House History",
+        "uname": "FAbhQuery",
+        "width": "792px"
+    },
+    {
+        "height": "528px",
         "name": "f_abi_master_query",
         "title": "Query Master - Group",
         "uname": "FAbiMasterQuery",
         "width": "848px"
+    },
+    {
+        "height": "436px",
+        "name": "f_abho_house_review",
+        "title": "USCS Release Status by House",
+        "uname": "FAbhoHouseReview",
+        "width": "624px"
     },
     {
         "height": "456px",
@@ -82,13 +89,6 @@
         "title": "Customs Status Query",
         "uname": "FAbiaMaster",
         "width": "844px"
-    },
-    {
-        "height": "436px",
-        "name": "f_abho_house_review",
-        "title": "USCS Release Status by House",
-        "uname": "FAbhoHouseReview",
-        "width": "624px"
     },
     {
         "height": "504px",

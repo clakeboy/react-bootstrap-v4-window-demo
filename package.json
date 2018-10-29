@@ -29,8 +29,8 @@
   },
   "homepage": "https://github.com/clakeboy/react-bootstrap-v4-window-demo#readme",
   "devDependencies": {
-    "@clake/react-bootstrap4": "^0.3.8",
-    "@clake/react-bootstrap4-window": "^0.0.4",
+    "@clake/react-bootstrap4": "^0.3.9",
+    "@clake/react-bootstrap4-window": "^0.0.7",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

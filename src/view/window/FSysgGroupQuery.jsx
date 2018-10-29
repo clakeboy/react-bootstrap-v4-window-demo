@@ -44,11 +44,11 @@ class FSysgGroupQuery extends React.Component {
                     <Table.Header text={'Group Name'} field={'group_name'} width={'148px'}/>
                     <Table.Header text={'No Billing'} field={'no_billing_sw'} width={'48px'}/>
                 </CTable>
-                <Input size={'xs'} absolute={true} x={'80px'} y={'48px'} width={'76px'}/>
+                <Input field={'group_code'} size={'xs'} absolute={true} x={'80px'} y={'48px'} width={'76px'}/>
                 <Label sm={true} text={'Group'} absolute={true} x={'20px'} y={'48px'} width={'52px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
                 <Button size={'xs'} absolute={true} x={'20px'} y={'8px'} width={'52px'} height={'24px'}>Query</Button>
                 <Button size={'xs'} absolute={true} x={'76px'} y={'8px'} width={'52px'} height={'24px'}>Clear</Button>
-                <Input size={'xs'} absolute={true} x={'268px'} y={'48px'} width={'156px'}/>
+                <Input field={'group_code'} size={'xs'} absolute={true} x={'268px'} y={'48px'} width={'156px'}/>
                 <Label sm={true} text={'Group Name'} absolute={true} x={'180px'} y={'48px'} width={'80px'} height={'20px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
             </React.Fragment>
         );
