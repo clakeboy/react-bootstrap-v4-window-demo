@@ -16,6 +16,7 @@ import ReactBootstrap4,{
     Tabs,
     Box,
     Form,
+    CKModal
 } from '@clake/react-bootstrap4';
 import {
     CTable
@@ -34,17 +35,31 @@ class FAbiaMaster extends React.Component {
 
         this.state = {
             //query state
-            queryColumns:{
-                master_bl_no: 'test'
-            }
+            queryColumns:{}
         }
     }
 
     componentDidMount() {
+        this.loadData();
+    }
 
+    loadData() {
+        //用setTimeout 模拟后端取值
+        this.modal.loading('Loading');
+        setTimeout(()=>{
+            this.modal.close();
+            let data = {
+                master_bl_no: '设置 MASTER值',
+                file_doc_number: '设置 File值'
+            };
+            this.setState({
+                queryColumns:data
+            })
+        },1000)
     }
 
     queryHandler = ()=>{
+        //得到数据,显示到控制台
         console.log(this.form1.getValues());
     };
 
@@ -61,7 +76,7 @@ class FAbiaMaster extends React.Component {
                             <Button size={'xs'} absolute={true} x={'740px'} y={'43px'} width={'80px'} height={'24px'} onClick={
                                 this.queryHandler
                             }>Requery</Button>
-                            <Input field={'file_doc_number'} size={'xs'} absolute={true} x={'112px'} y={'120px'} width={'112px'}/>
+                            <Input field={'file_doc_number'} size={'xs'} absolute={true} x={'112px'} y={'120px'} width={'112px'} data={this.state.queryColumns.file_doc_number}/>
                             <Label sm={true} text={'File No.'} absolute={true} x={'32px'} y={'120px'} width={'72px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
                             <Input field={'status_desc'} size={'xs'} absolute={true} x={'296px'} y={'43px'} width={'96px'}/>
                             <Label sm={true} text={'Status'} absolute={true} x={'240px'} y={'43px'} width={'48px'} height={'19px'} color={'rgb(0,0,0)'} backColor={'rgb()'}/>
@@ -118,6 +133,7 @@ class FAbiaMaster extends React.Component {
                         </CTable>
                     </TabsContent>
                 </Tabs>
+                <CKModal ref={c=>this.modal=c} center/>
             </React.Fragment>
         );
     }
