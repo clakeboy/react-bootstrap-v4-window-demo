@@ -76,21 +76,6 @@ gulp.task('clean', (callback) => {
 
 gulp.task('build:pack', (callback)=>{
     let webpackConfig = require('./webpack.prod').default;
-// return gulp.src('dist/*.js')
-//     .pipe(replaceVersion())
-//     .pipe(addBanner())
-//     // .pipe($.rename('ticket_manage.min.js'))
-//     // .pipe(gulp.dest(paths.dist))
-//     .pipe($.rename({suffix: '.min'}))
-//     .pipe(gulp.dest(paths.dist));
-// gulp.start('webpack');
-// webpackStream(webpackConfig,null, function(err, stats) {
-//     if(err) throw new gutil.PluginError("webpack", err);
-//     gutil.log("[webpack]", stats.toString({
-//         color:true
-//     }));
-//     callback();
-// });
     webpack(webpackConfig,function(err,stats){
         gutil.log("[webpack]", stats.toString({
             colors:true
