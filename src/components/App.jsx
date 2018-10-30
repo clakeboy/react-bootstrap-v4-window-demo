@@ -2,7 +2,8 @@
  * Created by clakeboy on 2017/12/3.
  */
 import React from 'react';
-import {GetComponent} from "../common/Funcs";
+import {GetComponent,GetQuery} from "../common/Funcs";
+import Login from "./Login";
 import {
     LoaderComponent
 } from '@clake/react-bootstrap4';
@@ -10,11 +11,29 @@ import {
 export default class App extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            login:false,
+            title:'ABI Query',
+        };
     }
 
     componentDidMount() {
 
     }
+
+    setLogin = (user,is_login) => {
+        this.user = user;
+        this.setState({
+            login:is_login
+        });
+    };
+
+    setTitle = (title)=>{
+        this.setState({
+            title:title
+        });
+        document.title = title;
+    };
 
     ucFirst(str) {
         let first = str[0].toUpperCase();
@@ -43,8 +62,10 @@ export default class App extends React.Component {
     }
 
     render() {
-        console.log("render app");
-        let load_path = this.explainUrl(this.props.location.pathname);
-        return <LoaderComponent loadPath={load_path} import={GetComponent} {...this.props}/>
+        if (!this.state.login) {
+            return <Login setLogin={this.setLogin}/>
+        }
+        let path = this.explainUrl(this.props.location.pathname);
+        return <LoaderComponent loadPath={path} query={GetQuery(this.props.location.search)} import={GetComponent} setLogin={this.setLogin} setTitle={this.setTitle} user={this.user} {...this.props}/>
     }
 }

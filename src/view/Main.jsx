@@ -27,6 +27,7 @@ import {
     TopMenu
 } from '@clake/react-bootstrap4-window';
 import windowList from './window/windows';
+import Storage from "../common/Storage";
 
 class Main extends React.Component {
     constructor(props) {
@@ -122,11 +123,26 @@ class Main extends React.Component {
         };
     }
 
+    loginOut() {
+        Storage.remove('login_user');
+        this.props.setLogin(null,false);
+    }
+
     render() {
         return (
             <Container className='mt-5'>
                 <TopMenu top>
                     <div className='ck-top-menu-item'><Icon icon='copyright'/></div>
+                    <TopMenu.Item text='System'>
+                        <Menu onClick={(key)=>{
+                            if (key === 'loginout') this.loginOut();
+                            if (key === 'test') this.manage.open('test');
+                        }}>
+                            <Menu.Item field={'test'}>Test Window</Menu.Item>
+                            <Menu.Item step/>
+                            <Menu.Item field={'loginout'}>login out</Menu.Item>
+                        </Menu>
+                    </TopMenu.Item>
                     <TopMenu.Item text='ABI'>
                         <Menu onClick={(key)=>{
                             this.manage.open(key);
@@ -136,10 +152,12 @@ class Main extends React.Component {
                             })}
                         </Menu>
                     </TopMenu.Item>
-                    <TopMenu.Item text='Other'/>
                 </TopMenu>
                 <h1 className='fixed-bottom'>React Bootstrap v4 Window Demo</h1>
                 <WindowGroup ref={c=>this.manage=c}>
+                    <Window name='test' marginTop={25} title='Test CTable' width='700px' height='500px' backColor={'#f3f3f4'}>
+                        <LoaderComponent loadPath='/test/CTableTest' parent={this} import={GetComponent}/>
+                    </Window>
                     {windowList.map((item)=>{
                         return (<Window name={item.name} marginTop={25} title={item.title} width={item.width} height={item.height} backColor={'#f3f3f4'}>
                             <LoaderComponent loadPath={`/window/${item.uname}.jsx`} import={GetComponent}/>
