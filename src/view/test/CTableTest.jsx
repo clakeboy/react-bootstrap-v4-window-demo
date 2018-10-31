@@ -17,9 +17,10 @@ class CTableTest extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            table_data:[]
+            table_data:[],
+            data_count:0,
+            page:1
         };
-
 
         if (this.props.parent instanceof Window) {
             this.window = this.props.parent;
@@ -36,8 +37,10 @@ class CTableTest extends React.Component {
                 data.push({'id': i+1, 'name': 'Clake'+i});
             }
             this.setState({
-                table_data:data
-            })
+                table_data:data,
+                page:1,
+                data_count:data.length
+            });
         },1000)
     }
 
@@ -56,7 +59,13 @@ class CTableTest extends React.Component {
                     right:'10px',
                     left:'10px',
                     bottom:'10px'
-                }} absolute={true} y={'100px'} x={'10px'} width='250px' height='300px' bordered={true} data={this.state.table_data}>
+                }} absolute={true} y={'100px'} x={'10px'} width='250px' height='300px' bordered={true}
+                        onSelectPage={(page)=>{
+                            console.log(page);
+                        }}
+                        page={this.state.page}
+                        dataCount={this.state.data_count}
+                        data={this.state.table_data}>
                     <TableHeader field='id' text='ID' width='100px'/>
                     <TableHeader field='name' text='Name' width='200px'/>
                 </CTable>
