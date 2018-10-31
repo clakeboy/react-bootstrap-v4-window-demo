@@ -16,11 +16,10 @@ import {
 class CTableTest extends React.Component {
     constructor(props) {
         super(props);
-        this.table_data = [];
+        this.state = {
+            table_data:[]
+        };
 
-        for (let i=0;i<5;i++) {
-            this.table_data.push({'id': i+1, 'name': 'Clake'+i});
-        }
 
         if (this.props.parent instanceof Window) {
             this.window = this.props.parent;
@@ -31,6 +30,15 @@ class CTableTest extends React.Component {
         console.log(this.window);
         this.window.on(Window.EVT_SHOW,this.showHandler);
         this.window.on(Window.EVT_CLOSE,this.closeHandler);
+        setTimeout(()=>{
+            let data = [];
+            for (let i=0;i<5;i++) {
+                data.push({'id': i+1, 'name': 'Clake'+i});
+            }
+            this.setState({
+                table_data:data
+            })
+        },1000)
     }
 
     showHandler = ()=>{
@@ -48,7 +56,7 @@ class CTableTest extends React.Component {
                     right:'10px',
                     left:'10px',
                     bottom:'10px'
-                }} absolute={true} y={'100px'} x={'10px'} width='250px' height='300px' bordered={true} data={this.table_data}>
+                }} absolute={true} y={'100px'} x={'10px'} width='250px' height='300px' bordered={true} data={this.state.table_data}>
                     <TableHeader field='id' text='ID' width='100px'/>
                     <TableHeader field='name' text='Name' width='200px'/>
                 </CTable>

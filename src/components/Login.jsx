@@ -141,7 +141,10 @@ class Login extends React.PureComponent {
                     </div>
                     <div className="card-body">
                         <Input className='mb-4' placeholder='Username' data={this.state.page_data.user_name} onChange={this.changeHandler('user_name')}/>
-                        <Input className='mb-4' placeholder='Password' type='password' data={this.state.page_data.password} onChange={this.changeHandler('password')}/>
+                        <Input className='mb-4' placeholder='Password' type='password'
+                               data={this.state.page_data.password}
+                               onEnter={this.login}
+                               onChange={this.changeHandler('password')}/>
                         <Checkbox label='Save Username' onChange={e=>{
                             let data = this.state.page_data;
                             data['remember'] = e.target.checked;
@@ -149,7 +152,7 @@ class Login extends React.PureComponent {
                                 page_data:data
                             })
                         }} checked={this.state.page_data.remember}/>
-                        <Button size='lg' block onClick={this.login}>Sign up</Button>
+                        <Button size='lg' block onClick={this.login}>Sign in</Button>
                     </div>
                 </div>
                 <Modal ref={c=>this.modal=c}/>
