@@ -136,7 +136,7 @@ class Main extends React.Component {
                     <TopMenu.Item text='System'>
                         <Menu onClick={(key)=>{
                             if (key === 'loginout') this.loginOut();
-                            if (key === 'test') this.manage.open('test');
+                            if (key === 'test') this.manage.open('test',{id:'test data'});
                         }}>
                             <Menu.Item field={'test'}>Test Window</Menu.Item>
                             <Menu.Item step/>
@@ -145,7 +145,7 @@ class Main extends React.Component {
                     </TopMenu.Item>
                     <TopMenu.Item text='ABI'>
                         <Menu onClick={(key)=>{
-                            this.manage.open(key);
+                            this.manage.open(key,{id:123123});
                         }}>
                             {windowList.map((item)=>{
                                 return <Menu.Item field={item.name}>{item.title}</Menu.Item>
