@@ -68,6 +68,7 @@ class CTableTest extends React.Component {
             content:'Alert message',
             fade:true
         });
+        this.manage.open('f_abha_house_review');
     };
 
     render() {
