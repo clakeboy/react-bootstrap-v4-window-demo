@@ -30,7 +30,7 @@
   "homepage": "https://github.com/clakeboy/react-bootstrap-v4-window-demo#readme",
   "devDependencies": {
     "@clake/react-bootstrap4": "^0.4.6",
-    "@clake/react-bootstrap4-window": "^0.1.2",
+    "@clake/react-bootstrap4-window": "^0.1.3",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

@@ -31,6 +31,8 @@ class CTableTest extends React.Component {
             //传送的窗体参数
             this.params = this.window.params;
         }
+
+        this.id = 0;
     }
 
     componentDidMount() {
