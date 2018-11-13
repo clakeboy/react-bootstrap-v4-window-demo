@@ -3,7 +3,6 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
 import {
     CTable,
     Window,
@@ -32,7 +31,9 @@ class CTableTest extends React.Component {
             this.params = this.window.params;
         }
 
-        this.id = 0;
+        this.org_data;
+
+        this.id = 1;
     }
 
     componentDidMount() {
@@ -41,23 +42,29 @@ class CTableTest extends React.Component {
         console.log(this.params);
         this.window.on(Window.EVT_SHOW,this.showHandler);
         this.window.on(Window.EVT_CLOSE,this.closeHandler);
+        this.getData()
+    }
+
+    getData() {
         this.modal.loading('loading');
+        this.id++;
         setTimeout(()=>{
             let data = [];
             for (let i=0;i<5;i++) {
-                data.push({'id': i+1, 'name': 'Clake'+i});
+                data.push({'id': i+1, 'name': `${this.id}-${RandomString(32)}`});
             }
+            this.org_data = data.slice(0);
             this.setState({
                 table_data:data,
                 page:1,
                 data_count:data.length
             });
             this.modal.alert('loading ssussce');
-        },1000)
+        },200)
     }
 
     showHandler = ()=>{
-        this.modal.alert('打开窗口');
+        this.getData();
     };
 
     closeHandler = ()=>{
@@ -70,7 +77,50 @@ class CTableTest extends React.Component {
             content:'Alert message',
             fade:true
         });
-        this.manage.open('f_abha_house_review');
+        this.id ++;
+        this.manage.open('f_abha_house_review',{id:this.id});
+    };
+
+    sortHandler = (field,sort_type)=>{
+        let desc = sort_type === 'desc';
+        let data = this.state.table_data.slice(0);
+        data.sort((a,b)=>{
+            if (a[field] > b[field]) return desc?-1:1;
+            if (a[field] < b[field]) return desc?1:-1;
+            if (a[field] === b[field]) return 0;
+        });
+        this.setState({table_data:data})
+    };
+
+    filterHandler = (text,field,type)=>{
+        console.log(text,field,type);
+        let reg;
+        switch (type) {
+            case "start":
+                reg = new RegExp(`^${text}`);
+                break;
+            case "end":
+                reg = new RegExp(`${text}$`);
+                break;
+            case "clear":
+                this.setState({
+                    table_data:this.org_data.slice(0)
+                });
+                return;
+            default:
+                reg = new RegExp(`${text}`);
+        }
+        let data = this.state.table_data.slice(0);
+        let filter = [];
+        data.forEach((item)=>{
+            if (reg.test(item[field])) {
+                filter.push(item);
+            }
+        });
+
+        this.setState({
+            table_data: filter
+        });
     };
 
     render() {
@@ -81,13 +131,15 @@ class CTableTest extends React.Component {
                     right:'10px',
                     left:'10px',
                     bottom:'10px'
-                }} absolute={true} y={'100px'} x={'10px'} width='250px' height='300px' bordered={true}
+                }} move absolute={true} y={'100px'} x={'10px'} width='250px' height='300px' bordered={true}
                         onSelectPage={(page)=>{
                             console.log(page);
                         }}
                         page={this.state.page}
                         dataCount={this.state.data_count}
-                        data={this.state.table_data}>
+                        data={this.state.table_data}
+                        onFilter={this.filterHandler}
+                        onSort={this.sortHandler}>
                     <TableHeader field='id' text='ID' width='100px'/>
                     <TableHeader field='name' text='Name' width='200px'/>
                 </CTable>
