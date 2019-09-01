@@ -11,6 +11,7 @@ import {
 import {
     TableHeader,
     Button,
+    Common,
 } from '@clake/react-bootstrap4';
 
 class CTableTest extends React.Component {
@@ -51,7 +52,7 @@ class CTableTest extends React.Component {
         setTimeout(()=>{
             let data = [];
             for (let i=0;i<5;i++) {
-                data.push({'id': i+1, 'name': `${this.id}-${RandomString(32)}`});
+                data.push({'id': i+1, 'name': `${this.id}-${Common.RandomString(32)}`});
             }
             this.org_data = data.slice(0);
             this.setState({

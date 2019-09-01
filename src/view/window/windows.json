@@ -96,5 +96,19 @@
         "title": "Customs Status Query",
         "uname": "FAbioMaster",
         "width": "844px"
+    },
+    {
+        "height": "361px",
+        "name": "f_tra_truck_rate",
+        "title": "Truck Rate",
+        "uname": "FTraTruckRate",
+        "width": "652px"
+    },
+    {
+        "height": "560px",
+        "name": "f_tra_truck_rate_query",
+        "title": "Query Truck Rate",
+        "uname": "FTraTruckRateQuery",
+        "width": "1001px"
     }
 ]
