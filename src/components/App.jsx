@@ -61,9 +61,23 @@ export default class App extends React.Component {
         return ext_path + arr.join('/') + "/" + module;
     }
 
+    explainInside(path) {
+        let arr = path.split('/');
+        arr.shift();
+        let module = arr.pop();
+        return {
+            'path': '/Inside',
+            'window': module
+        }
+    }
+
     render() {
         if (!this.state.login) {
             return <Login setLogin={this.setLogin}/>
+        }
+        if (this.props.location.pathname.indexOf('/inside') === 0) {
+            let path = this.explainInside(this.props.location.pathname);
+            return <LoaderComponent loadPath={path.path} window={this.under2hump(path.window)} query={GetQuery(this.props.location.search)} import={GetComponent} setLogin={this.setLogin} setTitle={this.setTitle} user={this.user} {...this.props}/>
         }
         let path = this.explainUrl(this.props.location.pathname);
         return <LoaderComponent loadPath={path} query={GetQuery(this.props.location.search)} import={GetComponent} setLogin={this.setLogin} setTitle={this.setTitle} user={this.user} {...this.props}/>

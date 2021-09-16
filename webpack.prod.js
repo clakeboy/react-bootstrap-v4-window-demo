@@ -23,27 +23,29 @@ export default merge(cfg,{
         rules: [
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader,'style-loader','css-loader']
+                use: [MiniCssExtractPlugin.loader,'css-loader'],
+                exclude: /node_modules/
             },
             {
                 test: /\.less$/,
-                use: [MiniCssExtractPlugin.loader,'css-loader','less-loader']
+                use: [MiniCssExtractPlugin.loader,'css-loader','less-loader'],
+                exclude: /node_modules/
             }
         ]
     },
     optimization: {
-        splitChunks: {
-            minSize: 30000,
-            minChunks: 2,
-            cacheGroups: {
-                commons: {
-                    test:/\.js(x?)$/,
-                    chunks: "initial",
-                    filename: 'common.js',
-                }
-            }
-        },
-        minimize:true,
+        // splitChunks: {
+        //     minSize: 50000,
+        //     minChunks: 2,
+        //     cacheGroups: {
+        //         commonFunc: {
+        //             filename:'common.js',
+        //             test:/\.js(x?)$/,
+        //             chunks: "initial"
+        //         }
+        //     }
+        // },
+        minimizer:[new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
     },
     mode: 'production',
     externals: {
