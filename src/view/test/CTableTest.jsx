@@ -69,7 +69,7 @@ class CTableTest extends React.Component {
     };
 
     closeHandler = ()=>{
-        this.modal.alert('关闭窗口');
+
     };
 
     clickHandler = ()=>{
@@ -126,7 +126,7 @@ class CTableTest extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
+            <>
                 <Button absolute y='10px' x='10px' size='sm' onClick={this.clickHandler}>Alert</Button>
                 <CTable position={{
                     right:'10px',
@@ -145,7 +145,7 @@ class CTableTest extends React.Component {
                     <TableHeader field='name' text='Name' width='200px'/>
                 </CTable>
                 <WModal ref={c=>this.modal=c} fade/>
-            </React.Fragment>
+            </>
         );
     }
 }

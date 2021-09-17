@@ -135,10 +135,20 @@ class Main extends React.Component {
                     <div className='ck-top-menu-item'><Icon icon='copyright'/></div>
                     <TopMenu.Item text='System'>
                         <Menu onClick={(key)=>{
-                            if (key === 'loginout') this.loginOut();
-                            if (key === 'test') this.manage.open('test',{id:'test data'});
+                            switch(key) {
+                                case "loginout":
+                                    this.loginOut();
+                                    break;
+                                case "test":
+                                    this.manage.open('test',{id:'test data'});
+                                    break;
+                                case "inside":
+                                    this.manage.open('inside',{id:'test data'});
+                                    break;
+                            }
                         }}>
                             <Menu.Item field={'test'}>Test Window</Menu.Item>
+                            <Menu.Item field={'inside'}>Test Inside</Menu.Item>
                             <Menu.Item step/>
                             <Menu.Item field={'loginout'}>login out</Menu.Item>
                         </Menu>
@@ -157,6 +167,9 @@ class Main extends React.Component {
                 <WindowGroup ref={c=>this.manage=c}>
                     <Window name='test' marginTop={25} title='Test CTable' width='700px' height='500px' backColor={'#f3f3f4'}>
                         <LoaderComponent loadPath='/test/CTableTest' parent={this} import={GetComponent}/>
+                    </Window>
+                    <Window name='inside' marginTop={25} title='Test Inside' width='700px' height='500px' backColor={'#f3f3f4'}>
+                        <LoaderComponent loadPath='/test/Inside' parent={this} import={GetComponent}/>
                     </Window>
                     {windowList.map((item)=>{
                         return (<Window name={item.name} marginTop={25} title={item.title} width={item.width} height={item.height} backColor={'#f3f3f4'}>
